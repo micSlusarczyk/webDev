@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iFrame</title>
+  </head>
+  <body>
+    <!-- Simple iFrame -->
+    <iframe src="/html/paragraphs.html" width="400" height="200"></iframe>
+
+    <!-- Removing Default Frameborder -->
+    <iframe src="/html/paragraphs.html" style="border: none"></iframe>
+
+    <!-- Using an iFrame as Link Target -->
+    <iframe src="/html/paragraphs.html" name="myFrame"></iframe>
+    <p>
+      <a href="https://tutorialrepublic.com" target="myFrame"
+        >Open TutorialRepublic.com</a
+      >
+    </p>
+  </body>
+</html>
