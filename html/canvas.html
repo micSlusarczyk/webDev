@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+    <script>
+      //Drawing a Line
+      /*  window.onload = function () {
+          var canvas = document.getElementById("myCanvas");
+          var context = canvas.getContext("2d");
+          context.moveTo(50, 120);
+          context.lineTo(250, 50);
+          context.stroke();
+        }; */
+
+      //Drawing a Arc
+      /* window.onload = function () {
+          var canvas = document.getElementById("myCanvas");
+          var context = canvas.getContext("2d");
+          context.arc(150, 150, 80, 1.2 * Math.PI, 1.8 * Math.PI, false);
+          context.stroke();
+        }; */
+
+      //Drawing a Rectangle
+      /*   window.onload = function () {
+          var canvas = document.getElementById("myCanvas");
+          var context = canvas.getContext("2d");
+          context.rect(50, 50, 200, 100);
+          context.stroke(); 
+        };*/
+      //Drawing a Circle
+      /* window.onload = function () {
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+        context.arc(150, 100, 70, 0, 2 * Math.PI, false);
+        context.stroke();
+      }; */
+
+      //Applying Styles and Colors on Stroke
+      /* window.onload = function () {
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+        context.lineWidth = 10;
+        context.strokeStyle = "orange";
+        context.lineCap = "round";
+        context.arc(150, 150, 80, 1.2 * Math.PI, 1.8 * Math.PI, false);
+        context.stroke();
+      }; */
+      //Drawing Text on Canvas
+      window.onload = function(){
+        var canvas =  document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+        context.font = "bold 32px Arial";
+        context.textAlign = "center";
+        context.textBaseline = "middle";
+        context.fillStyle = "orange";
+        context.fillText("Hello World !", 150, 150);
+      }
+    </script>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="300" height="200"> </canvas>
+  </body>
+</html>
