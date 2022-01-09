@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alignment</title>
+    <style>
+      /* center alignmentusing the margin property */
+      .center {
+        width: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        background: khaki;
+        margin-top: 100px;
+      }
+      /* Alignnig elements using the position property */
+      .up {
+        position: absolute;
+        top: 0;
+        background: lavender;
+        padding: 20px;
+      }
+      .down {
+        position: absolute;
+        bottom: 0;
+        background: lawngreen;
+        padding: 20px;
+      }
+      /* left and right alignment using the float property */
+      .red {
+        float: left;
+        background: lawngreen;
+        padding: 20px;
+      }
+      .green {
+        float: right;
+        background: rosybrown;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">This div container is center aligned horizontally.</div>
+    <div class="red">Floated to left.</div>
+    <div class="green">Floated to right.</div>
+    <p class="up">
+      This paragraph is placed at the top of the document's viewport.
+    </p>
+    <p class="down">
+      This paragraph is placed at the bottom of the document's viewport.
+    </p>
+  </body>
+</html>
