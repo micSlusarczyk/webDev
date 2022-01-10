@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo classes</title>
+    <style>
+      a:link {
+        color: blue;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+      a:visited {
+        color: red;
+      }
+      a:active {
+        color: gray;
+      }
+      a:focus {
+        color: yellow;
+      }
+      /* Pseudo class */
+      ol {
+        padding: 0;
+        list-style: none;
+      }
+      ol li {
+        padding: 10px 0;
+        border-top: 1px solid #000;
+      }
+      li:first-child {
+        border-top: none;
+      }
+      /* nth pseudo class */
+      table {
+        margin: 30px;
+        border-collapse: collapse;
+      }
+      table tr {
+        border-bottom: 1px solid #666;
+      }
+      table tr th,
+      table tr td {
+        padding: 10px;
+      }
+      table tr:nth-child(2n) td {
+        background: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Visit
+      <a href="https://www.tutorialrepublic.com" target="_blank"
+        >www.tutorialrepublic.com</a
+      >
+    </p>
+    <h1>Sample Ordered Lists</h1>
+    <ol>
+      <li>Mix ingredients</li>
+      <li>Bake in oven for an hour</li>
+      <li>Allow to stand for ten minutes</li>
+    </ol>
+    <table>
+      <tr>
+        <th>Row</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>John</td>
+        <td>Carter</td>
+        <td>johncarter@mail.com</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Peter</td>
+        <td>Parker</td>
+        <td>peterparker@mail.com</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>John</td>
+        <td>Rambo</td>
+        <td>johnrambo@mail.com</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Harry</td>
+        <td>Potter</td>
+        <td>harrypotter@mail.com</td>
+      </tr>
+    </table>
+  </body>
+</html>
