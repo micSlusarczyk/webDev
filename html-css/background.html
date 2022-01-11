@@ -1,23 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Background</title>
-  <style>
-    body{
-      /*background-color: #f0e68c;*/
-      background-image: url("/images/view.jpg");
-      /* background-repeat: repeat-x; */
-      background-repeat: no-repeat;
-      /* background position */
-      background-position: right top;
-      background-attachment: fixed;
-    }
-  </style>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background</title>
+    <style>
+      body {
+        /*background-color: #f0e68c;*/
+        background-image: url("/images/view.jpg");
+        /* background-repeat: repeat-x; */
+        background-repeat: no-repeat;
+        /* background position */
+        background-position: right top;
+        background-attachment: fixed;
+      }
+      /* background-size property */
+      .box {
+        width: 250px;
+        height: 150px;
+        background: url("/images/view.jpg") no-repeat;
+        background-size: contain;
+        border: 6px solid #333;
+      }
+
+      /* background clipping */
+      .box_1 {
+        width: 250px;
+        height: 150px;
+        padding: 10px;
+        border: 6px dashed #333;
+        background: orange;
+      }
+      .clip1 {
+        background-clip: border-box;
+      }
+      .clip2 {
+        background-clip: padding-box;
+      }
+      .clip3 {
+        background-clip: content-box;
+      }
+      /* background-origin property */
+      .box_2 {
+        width: 230px;
+        height: 150px;
+        padding: 10px;
+        border: 6px dashed #333;
+        background: url("/images/view.jpg") no-repeat;
+        background-size: contain;
+        background-origin: content-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+
+    <h2>Default Background Behavior</h2>
+    <div class="box_1"></div>
+    <h2>Background Clipping Using border-box</h2>
+    <div class="box_1 clip1"></div>
+    <h2>Background Clipping Using padding-box</h2>
+    <div class="box_1 clip2"></div>
+    <h2>Background Clipping Using content-box</h2>
+    <div class="box_1 clip3"></div>
+    <div class="box_2"></div>
+  </body>
 </html>

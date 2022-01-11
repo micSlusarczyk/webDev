@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradients</title>
+    <style>
+      div {
+        margin-bottom: 20px;
+      }
+      /* Linear gradients  TOP to BOTTOM*/
+      .gradient {
+        width: 400px;
+        height: 300px;
+        /* fallback for browsers that dont't support gradients */
+        background: red;
+        background: linear-gradient(red, yellow);
+      }
+      /* left to right */
+      .gradient_1 {
+        width: 400px;
+        height: 300px;
+        background: linear-gradient(to right, red, yellow);
+      }
+      /* diagonal gradient */
+      .gradient_2 {
+        width: 400px;
+        height: 300px;
+        background: linear-gradient(to top right, red, yellow);
+      }
+      /* setting gradient direction */
+      .gradient_3 {
+        width: 400px;
+        height: 300px;
+        background: linear-gradient(90deg, red, yellow);
+      }
+      /* multiple colors */
+      .gradient_4 {
+        width: 400px;
+        height: 300px;
+        background: linear-gradient(red, yellow, green);
+      }
+      /* setting location the color stops */
+      .gradient_5 {
+        width: 400px;
+        height: 300px;
+        background: linear-gradient(red, yellow 30%, lime 60%);
+      }
+      /* repeating the linear gradient */
+      .gradient_6 {
+        width: 400px;
+        height: 300px;
+        background: repeating-linear-gradient(black, white 10%, lime 20%);
+      }
+      /* radial gradient */
+      .gradient_7 {
+        width: 400px;
+        height: 300px;
+        background: radial-gradient(red, yellow, green);
+      }
+      /* setting the shape radial gradients */
+      .gradient_8 {
+        width: 400px;
+        height: 300px;
+        background: radial-gradient(circle, red, yellow, green);
+      }
+      /* setting the size radial gradients */
+      .gradient_9 {
+        width: 400px;
+        height: 300px;
+        background: radial-gradient(
+          circle farthest-side at left bottom,
+          red,
+          yellow,
+          green
+        );
+      }
+      /* repeating the size radial gradients */
+      .gradient_10 {
+        width: 400px;
+        height: 300px;
+        background: repeating-radial-gradient(black, white 10%, lime 20%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gradient"></div>
+    <div class="gradient_1"></div>
+    <div class="gradient_2"></div>
+    <div class="gradient_3"></div>
+    <div class="gradient_4"></div>
+    <div class="gradient_5"></div>
+    <div class="gradient_6"></div>
+    <div class="gradient_7"></div>
+    <div class="gradient_8"></div>
+    <div class="gradient_9"></div>
+    <div class="gradient_10"></div>
+  </body>
+</html>
