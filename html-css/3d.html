@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3d</title>
+    <style>
+      /* 3d translate */
+      .container {
+        width: 125px;
+        height: 125px;
+        perspective: 500px;
+        border: 4px solid #e5a043;
+        background: #fff2dd;
+        margin: 30px;
+      }
+      /* transform */
+      .transformed {
+        transform: translate3d(25px, 25px, 50px);
+      }
+      /* rotate */
+      .transformed-rotate {
+        transform: rotate3d(0, 1, 0, 60deg);
+      }
+      /* scale */
+      .transformed-scale {
+        transform: scale3d(1, 1, 2) rotate3d(1, 0, 0, 60deg);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Before Translation:</h2>
+    <div class="container">
+      <img src="/images/view.jpg" alt="view" width="125" height="125" />
+    </div>
+    <h2>After Translation:</h2>
+    <div class="container">
+      <img
+        class="transformed"
+        src="/images/view.jpg"
+        alt="view"
+        width="125"
+        height="125"
+      />
+    </div>
+    <h2>Before Translation:</h2>
+    <div class="container">
+      <img src="/images/view.jpg" alt="view" width="125" height="125" />
+    </div>
+    <h2>After Translation:</h2>
+    <div class="container">
+      <img
+        class="transformed-rotate"
+        src="/images/view.jpg"
+        alt="view"
+        width="125"
+        height="125"
+      />
+    </div>
+    <h2>Before Scaling:</h2>
+    <div class="container">
+      <img src="/images/view.jpg" alt="view" width="125" height="125" />
+    </div>
+    <h2>After Scaling:</h2>
+    <div class="container">
+      <img
+        class="transformed-scale"
+        src="/images/view.jpg"
+        alt="view"
+        width="125"
+        height="125"
+      />
+    </div>
+  </body>
+</html>

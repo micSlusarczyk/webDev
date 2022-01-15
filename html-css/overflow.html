@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overflow</title>
+    <style>
+      p {
+        width: 400px;
+        padding: 10px;
+        /*overflow: hidden;
+        white-space: nowrap;*/
+        background: #f2f2f2;
+      }
+      p.clipped {
+        text-overflow: clip;
+      }
+      p.ellipses {
+        text-overflow: ellipsis;
+      }
+      /*word wrap*/
+      p.wrap {
+        width: 200px;
+        padding: 10px;
+        background: #90ee90;
+        word-wrap: break-word;
+      }
+      p.nowrap {
+        width: 200px;
+        padding: 10px;
+        background: #90ee90;
+      }
+      /* word break  */
+      p.line1 {
+        width: 150px;
+        padding: 10px;
+        background: #90ee90;
+        word-break: break-all;
+      }
+      p.line2 {
+        width: 150px;
+        padding: 10px;
+        background: #efa38f;
+        word-break: keep-all;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Text-overflow Effect</h1>
+    <h2>Clip the text at the limit of the content area</h2>
+    <p class="clipped">
+      CSS is a Style Sheet Language for formatting the document content (written
+      in HTML or other markup language). You might be interested by the CSS
+      Working Group wiki too.
+    </p>
+    <h2>Render an ellipsis ("...") to represent clipped text</h2>
+    <p class="ellipses">
+      CSS is a Style Sheet Language for formatting the document content (written
+      in HTML or other markup language). You might be interested by the CSS
+      Working Group wiki too.
+    </p>
+    <p class="wrap">
+      This paragraph contains a veryveryveryveryveryveryveryverylongword. The
+      long word will automatically break and wrap to the next line.
+    </p>
+    <p class="nowrap">
+      This paragraph contains a veryveryveryveryveryveryveryverylongword. The
+      long word will automatically break and wrap to the next line.
+    </p>
+
+    <p class="line1">The line of this paragraph may break at any character.</p>
+    <p class="line2">The line of this paragraph will-break-at-hyphenates.</p>
+  </body>
+</html>
