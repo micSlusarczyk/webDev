@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive</title>
+    <style>
+      /* responsive with media queries */
+      body {
+        display: grid;
+        grid-template-areas:
+          "header header header"
+          "nav article ads"
+          "footer footer footer";
+        grid-template-rows: 80px 1fr 70px;
+        grid-template-columns: 20% 1fr 15%;
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+        height: 100vw;
+        margin: 0;
+      }
+
+      header,
+      footer,
+      article,
+      nav,
+      div {
+        padding: 1.2 em;
+        background: yellow;
+      }
+      .pageHeader {
+        grid-area: header;
+      }
+      .pageFooter {
+        grid-area: footer;
+      }
+      .mainArticle {
+        grid-area: article;
+      }
+      .mainNav {
+        grid-area: nav;
+      }
+      .siteAds {
+        grid-area: ads;
+      }
+
+      /* Stack the layout on small devices/viewports */
+      @media all and (max-width: 575px) {
+        body {
+          grid-template-areas:
+            "header"
+            "article"
+            "ads"
+            "nav"
+            "footer";
+          grid-template-rows: 80px 1fr 70px 1fr 70px;
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="pageHeader">Header</header>
+    <article class="mainArticle">Article</article>
+    <nav class="mainNav">Nav</nav>
+    <div class="siteAds">Ads</div>
+    <footer class="pageFooter">Footer</footer>
+  </body>
+</html>

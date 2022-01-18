@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive_2</title>
+    <style>
+      /* auto-fill vs auto-fit */
+      .grid {
+        display: grid;
+        grid-gap: 2vw;
+        border: 1px solid black;
+        margin: 10px;
+      }
+      .grid > div {
+        font-size: 5vw;
+        padding: 0.5em;
+        background: yellow;
+        text-align: center;
+      }
+      .auto-fill {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+      .auto-fit {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid auto-fill">
+      <div>1</div>
+      <div>2</div>
+    </div>
+    <div class="grid auto-fit">
+      <div>1</div>
+      <div>2</div>
+    </div>
+  </body>
+</html>
