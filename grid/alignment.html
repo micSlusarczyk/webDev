@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alignment</title>
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 100px;
+        /* for justify-items 
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);*/
+        grid-gap: 10px;
+        /*align-items: center;  align items property 
+        justify-items: center; justify items property 
+        justify-content: center;  justify content property */
+        align-content: center;
+      }
+      .grid > div {
+        padding: 20px;
+        font-size: 4vw;
+        color: white;
+        width: 20%;
+      }
+      .red {
+        background: red;
+        /* height: 40%;
+        align-self: baseline;
+        justify-self: end;*/
+      }
+      .green {
+        background: green;
+        /*height: 60%;*/
+      }
+      .blue {
+        background: blue;
+        /*height: auto;
+        align-self: stretch;
+        justify-self: start;*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="red">1</div>
+      <div class="green">2</div>
+      <div class="blue">3</div>
+    </div>
+  </body>
+</html>
