@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .myForm {
+        display: grid;
+        grid-template-areas:
+          "contact comments"
+          "... button";
+        grid-template-columns: 12em 1fr;
+        grid-template-rows: 12em 2em;
+        grid-gap: 0.8em;
+        background: #eee;
+        padding: 1.2em;
+      }
+      .myForm label {
+        grid-area: labels;
+      }
+
+      .myForm input {
+        grid-area: contact;
+        width: 100%;
+        padding: 1.1em;
+        border: none;
+        margin-bottom: 1em;
+      }
+      .myForm textarea {
+        min-height: calc(100% - 2em);
+        width: 100%;
+        border: none;
+      }
+
+      .contact-details{
+        grid-area: contact;
+      }
+      .comment-box{
+        grid-area: comments;
+      }
+      .myForm button{
+        margin-top: 10px;
+        grid-area: button;
+        border: 0;
+        background: grey;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="myForm">
+      <div class="contact-details">
+        <label for="customer_name">Name </label>
+        <input type="text" name="customer_name" id="customer_name" required />
+        <label for="email_address">Email </label>
+        <input type="email" name="email_address" id="email_address" />
+        <label for="phone">Phone </label>
+        <input type="tel" name="phone" id="phone" />
+      </div>
+      <div class="comment-box">
+        <label for="comments">Comments</label>
+        <textarea name="comments" id="comments" maxlength="500"></textarea>
+      </div>
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
