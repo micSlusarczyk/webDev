@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alignment</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        place-content: space-between center;/* shorthand for justify-content and align-center */
+        /*align-content: space-between; align contenr property */
+        /*justify-content: space-between; justify content property */
+        /*align-items: center;  align-items propoerty */
+        background: yellow;
+        height: 100vh;
+      }
+      .wrapper > div {
+        padding: 20px;
+        width: 60%;
+        font-size: 4vw;
+        color: white;
+      }
+      .red {
+        background: red;
+        /*align-self: flex-start;  align self property */
+      }
+      .green {
+        background: green;
+      }
+      .blue {
+        background: blue;
+        /*align-self: flex-end; align self property */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="red">1</div>
+      <div class="green">2</div>
+      <div class="blue">3</div>
+    </div>
+  </body>
+</html>

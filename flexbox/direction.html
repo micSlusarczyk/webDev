@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Direction</title>
+    <style>
+      .container {
+        display: flex;
+        /*flex-direction: row; row direction 
+        flex-direction: row-reverse;*/
+        flex-direction: row;
+        /* align-items: flex-start; */
+        background: yellow;
+        height: 100vh;
+        /* flex-wrap: wrap; */
+        flex-flow: row-reverse wrap; /* shorthand flex-direction and flex-wrap */
+        /*writing-mode: vertical-rl;/* determines whether a row goes hor or ver 
+        direction: rtl; display direction */
+      }
+      .red {
+        background: red;
+      }
+      .green {
+        background: green;
+      }
+      .blue {
+        background: blue;
+      }
+      .container > div {
+        width: 60%;
+        font-size: 5vw;
+        padding: 0.5em;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="red">1</div>
+      <div class="green">2</div>
+      <div class="blue">3</div>
+    </div>
+  </body>
+</html>
