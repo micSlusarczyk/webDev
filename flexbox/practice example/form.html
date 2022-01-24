@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .myForm {
+        display: flex;
+        background: yellow;
+        border-radius: 3px;
+        padding: 1.8em;
+      }
+      .message {
+        display: flex;
+        flex-direction: column;
+        order: 2;
+      }
+      .message > textarea {
+        flex: 1;
+        min-width: 18em;
+      }
+      .contact {
+        flex: 1;
+        order: 1;
+        margin-right: 2em;
+      }
+      .contact input {
+        width: 100%;
+      }
+      .contact input,
+      button {
+        padding: 1em;
+        margin-bottom: 1em;
+      }
+      .contact button {
+        background: grey;
+        color: white;
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" class="myForm">
+      <div class="message">
+        <label for="msg">Message</label>
+        <textarea id="msg"></textarea>
+      </div>
+      <div class="contact">
+        <label for="name">Name</label>
+        <input type="text" id="name" />
+        <label for="townborn">Town you were born in</label>
+        <input type="text" id="townborn" />
+        <label for="email">Email</label>
+        <input type="text" id="email" />
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
