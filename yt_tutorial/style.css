@@ -23,7 +23,7 @@
 
 html {
     font-size: 62.5%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body {
@@ -31,9 +31,10 @@ body {
 }
 
 section {
-    min-height: 100vh;
+    min-height: 80vh;
     padding: 0 9%;
     padding-top: 7.5rem;
+    padding-bottom: 2rem;
 }
 
 .btn {
@@ -51,6 +52,17 @@ section {
 
 .btn:hover {
     transform: scale(1.1);
+}
+
+.heading {
+    text-align: center;
+    background: var(--gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    padding: 1rem;
 }
 
 header {
@@ -139,6 +151,154 @@ header label {
     padding: 1rem 0;
 }
 
+.features .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.features .box-container .box {
+    flex: 1 1 30rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    margin: 1.5rem;
+    padding: 3rem 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: 0.2s linear;
+}
+
+.features .box-container .box img {
+    height: 15rem;
+}
+
+.features .box-container .box h3 {
+    font-size: 2rem;
+    color: #333;
+    padding-top: 1rem;
+}
+
+.features .box-container .box p {
+    font-size: 1.5rem;
+    color: #666;
+    padding: 1rem;
+}
+
+.about {
+    background: url(/yt_tutorial/images/about-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 3rem;
+}
+
+.about .column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about .column .image {
+    flex: 1 1 40rem;
+}
+
+.about .column .image img {
+    width: 100%;
+}
+
+.about .column .content {
+    flex: 1 1 40rem;
+}
+
+.about .column .content h3 {
+    font-size: 3rem;
+    color: #666;
+}
+
+.about .column .content p {
+    font-size: 1.5rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.about .column .content .buttons a:last-child {
+    margin-left: 2rem;
+}
+
+.newsletter {
+    text-align: center;
+    padding: 5rem 1rem;
+    background: url(/yt_tutorial/images/subscribe-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.newsletter h3 {
+    color: #fff;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.newsletter p {
+    color: #fff;
+    font-size: 1.6rem;
+    margin: 2rem auto;
+    width: 70rem;
+}
+
+.newsletter form {
+    display: flex;
+    max-width: 70rem;
+    border: 0.2rem solid #fff;
+    padding: 0.5rem;
+    border-radius: 5rem;
+    margin: 2rem auto;
+    height: 5.5rem;
+}
+
+.newsletter form input[type="email"]{
+padding: 0 2rem;
+font-size: 1.7rem;
+background: none;
+width: 100%;
+color:#fff;
+text-transform: none;
+background: none;
+}
+
+.newsletter form input[type="email"]::placeholder{
+  color:#eee;
+  text-transform: capitalize;
+}
+
+.newsletter form input[type="submit"]{
+background: #fff;
+width: 20rem;
+font-size: 1.7rem;
+border-radius: 5rem;
+cursor: pointer;
+}
+.newsletter form input[type="submit"]:hover{
+  color:var(--pink);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* media queries */
 @media (max-width: 1200px) {
     html {
@@ -202,10 +362,25 @@ header label {
     .home .content p {
         font-size: 1.5rem;
     }
+    .about {
+        background-position: right;
+    }
+
+    .newsletter p{
+      width: auto;
+    }
 }
 
 @media (max-width: 450px) {
     html {
         font-size: 50%;
+    }
+
+    .about .column .content .buttons a {
+        width: 100%;
+        text-align: center;
+    }
+    .about .column .content .buttons a:last-child {
+        margin: 1rem 0;
     }
 }
