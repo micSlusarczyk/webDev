@@ -33,6 +33,9 @@ nav {
     box-shadow: 2px 2px 20px rgba(90, 118, 253, 0.13);
     z-index: 1;
     width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
 }
 
 nav ul {
@@ -291,5 +294,81 @@ nav ul li a:hover {
     background: #5a76fd;
     color: #fff;
     box-shadow: 5px 10px 30px rgba(90, 118, 253, 0.5);
-    transition: all ease .5s;
+    transition: all ease 0.5s;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5%;
+    border-top: 1px solid rgba(167, 167, 167, 0.2);
+}
+
+footer a,
+footer p {
+    color: #5e5e5e;
+}
+
+nav .menu-btn{
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    nav {
+        justify-content: space-between;
+        height: 65px;
+    }
+    .menu {
+        display: none;
+    }
+
+    nav .menu-icon {
+        cursor: pointer;
+        float: right;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+    }
+    nav .menu-icon .nav-icon {
+        background-color: #333;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background 0.2s ease-out;
+        width: 18px;
+    }
+    nav .menu-icon .nav-icon::before,
+    nav .menu-icon .nav-icon::after {
+        background-color: #333;
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all ease-out 0.2s;
+        width: 100%;
+    }
+    nav .menu-icon .nav-icon::before {
+        top: 5px;
+    }
+
+    nav .menu-icon .nav-icon::after {
+        top: -5px;
+    }
+
+    nav .menu-btn:checked ~ .menu-icon .nav-icon {
+        background: transparent;
+    }
+    nav .menu-btn:checked ~ .menu-icon .nav-icon::before {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+    nav .menu-btn:checked ~ .menu-icon .nav-icon::after {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    nav .menu-btn{
+        display: none;
+    }
 }
